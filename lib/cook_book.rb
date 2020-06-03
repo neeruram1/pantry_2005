@@ -8,4 +8,9 @@ class CookBook
   def add_recipe(recipe)
     @recipes << recipe
   end
+
+  def ingredients
+    binding.pry
+
+  end
 end
