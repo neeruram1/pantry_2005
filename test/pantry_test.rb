@@ -20,22 +20,22 @@ class PantryTest < Minitest::Test
   end
 
   def test_its_ingredients_start_with_0_quantity
-    @pantry.add_ingredient(@ingredient1)
+    @pantry.stock_ingredient(@ingredient1)
 
     assert_equal 0, @pantry.stock[@ingredient1]
   end
 
   def test_it_can_check_stock
-    @pantry.add_ingredient(@ingredient1)
+    @pantry.stock_ingredient(@ingredient1)
 
     assert_equal 0, @pantry.stock_check(@ingredient1)
   end
 
   def test_it_can_restock
-    @pantry.add_ingredient(@ingredient1)
+    @pantry.stock_ingredient(@ingredient1)
     @pantry.restock(@ingredient1, 5)
     @pantry.restock(@ingredient1, 10)
-    @pantry.add_ingredient(@ingredient2)
+    @pantry.stock_ingredient(@ingredient2)
     @pantry.restock(@ingredient2, 7)
 
     assert_equal 15, @pantry.stock_check(@ingredient1)

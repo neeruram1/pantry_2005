@@ -5,7 +5,7 @@ class Pantry
     @stock = {}
   end
 
-  def add_ingredient(ingredient)
+  def stock_ingredient(ingredient)
     @stock[ingredient] = 0
   end
 
